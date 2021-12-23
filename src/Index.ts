@@ -5,7 +5,7 @@ export default class AppIndex extends User {
 
 }
 
-const user = new AppIndex('sss','ssss')
+const user = new AppIndex('ww@ww.de','12345')
 console.log(user);
 
 class Rectagle {
@@ -34,9 +34,9 @@ class Rectagle {
     }
 }
 
-const rect = new Rectagle(11,22)
+/* const rect = new Rectagle(11,22)
 rect.width=-2
-console.log(rect);
+console.log(rect); */
 
 const db = new Database(1,2,3,4)
 db.createNewTable('roles')
