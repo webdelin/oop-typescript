@@ -3,7 +3,7 @@ export default class Database {
     private _port;
     private _username;
     private _password;
-    private _tables:any;
+    private _tables: string[];
 
     constructor(url: any, port: any, username: any, password: any) {
         this._url = url;
