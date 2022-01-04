@@ -1,44 +1,20 @@
-import Database from "./Database";
+import Developer from "./Developer";
+import Person from "./Person";
 import User from "./User";
+import Car from "./Aggregation";
 
-export default class AppIndex extends User {
+const user = new User('user@user', 'user')
+const person = new Person('person@person', 'person', 'Wendelin', 'Gerein', 45)
+const developer = new Developer('developer@developer', 'developer', 'Wendelin', 'Gerein', 45, 'Middle', 'Javascript')
 
+const userList:User[] = [user,person,developer]
+
+function massGreating(users: User[]){
+    users.map(item=>item.greeting())
 }
-
-const user = new AppIndex('ww@ww.de','12345')
-console.log(user);
-
-class Rectagle {
-    private _width;
-    private _height;
-
-    constructor(w: number,h: number){
-        this._width = w;
-        this._height = h;
-    }
-
-    public get width(){
-        return this._width
-    }
-
-    public set width(value){
-        if(value<=0){
-            this._width = 1
-        } else {
-            this._width = value
-        }
-    }
-
-    calcArea(){
-        return this._width * this._height
-    }
-}
-
-/* const rect = new Rectagle(11,22)
-rect.width=-2
-console.log(rect); */
-
-const db = new Database(1,2,3,4)
-db.createNewTable('roles')
-db.createNewTable('users')
-console.log(db);
+massGreating(userList)
+/* user.greeting()
+person.greeting()
+developer.greeting() */
+const auto = new Car('Kirsche')
+auto.drive()
